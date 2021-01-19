@@ -14,7 +14,3 @@ def two_sum(args, target):
         else:
             return f'{[h[n], i]} values : {n , value}'
     return []
-
-
-if __name__ == "__main__":
-    print(two_sum([1, 6, 5, 7, 3, 8, 2], 10))
