@@ -1,4 +1,4 @@
-def two_sum(args, target):
+def two_numbers_sum(args, target):
     """
 
     :type args: List[int]

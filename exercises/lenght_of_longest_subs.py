@@ -1,4 +1,4 @@
-def lengthOfLongestSubstring(s):
+def length_of_longest_substring(s):
     dicts = {}
     maxlength = start = 0
     for i, value in enumerate(s):
