@@ -6,10 +6,11 @@ def remove_duplicate(nums: List[int]):
     :type nums: List[int]
     :rtype: int
     """
-    i = 0
-    while i < len(nums) - 1:
-        if nums[i] == nums[i+1]:
-            del nums[i+1]
-        else:
-            i += 1
-    return len(nums)
+    j = 0
+    i = 1
+    while i < len(nums):
+        if nums[i] != nums[j]:
+            j += 1
+            nums[j] = nums[i]
+        i += 1
+    return j + 1
