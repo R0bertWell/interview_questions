@@ -5,7 +5,7 @@ def median_of_two_arr(nums1: List[int], nums2: List[int]):
     """
     ex : Inputs : [1,2],[3,4]
     output : 2.5
-    cause (2+3)/2 = 2.5, which is a median
+    cause (2+3)/2 = 2.5 which is a median
 
     :param nums1: List[int]
     :param nums2: List[int]
