@@ -11,7 +11,13 @@ def add_2_nums(first_list, second_list):
     :intype second_list: List[int]
     :rtype List[int]
     """
+    res = []
     first_num = int("".join(map(str, first_list)))
     second_num = int("".join(map(str, second_list)))
     result = first_num + second_num
-    return list(str(result))
+    res.extend(str(result))
+    res = res[::-1]
+    return res
+
+
+print(add_2_nums([2, 4, 3], [5, 6, 4]))

@@ -1,4 +1,4 @@
-def convert_to_zig_zag(s: str, numRows: int):
+def convert_to_zig_zag(s: str, num_rows: int):
     """
     Um pouco mais lenta que a de baixo
     """
@@ -6,14 +6,14 @@ def convert_to_zig_zag(s: str, numRows: int):
     i = j = n = 0
     inversion = False
     while j < len(s):
-        if numRows > 1:
-            if len(arr) < numRows:
+        if num_rows > 1:
+            if len(arr) < num_rows:
                 arr += [[]]
             if inversion is False:
                 arr[i] += s[j]
                 j += 1
                 i += 1
-                if i >= numRows:
+                if i >= num_rows:
                     i -= 1
                     inversion = True
             else:
@@ -33,24 +33,24 @@ def convert_to_zig_zag(s: str, numRows: int):
     return s
 
 
-def zig_zag_convert(s: str, numRows: int):
+def zig_zag_convert(s: str, num_rows: int):
     """
     Um pouco mais rapida que a de cima
     """
     i = j = 0
     string_final = ""
-    multi_init = (numRows - 1) * 2
+    multi_init = (num_rows - 1) * 2
     multi_mid = 0
-    if len(s) < 2 or numRows < 2:
+    if len(s) < 2 or num_rows < 2:
         return s
     else:
-        while j != numRows:
+        while j != num_rows:
             if j == 0:
                 string_final += s[i::multi_init]
                 multi_mid = multi_init - 2
                 j += 1
                 i += 1
-            elif (numRows - 1) > j > 0:
+            elif (num_rows - 1) > j > 0:
                 string_final += s[i:multi_mid + i + 1:multi_mid]
                 while multi_init + i < len(s):
                     if i + multi_init < len(s):
